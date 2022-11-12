@@ -19,6 +19,7 @@ public class BotController : MonoBehaviour
     {
         var forwardInput = Input.GetAxis("Vertical");
         var rotationInput = Input.GetAxis("Horizontal");
+
         if (Input.GetKey(KeyCode.W)) {
             animator.SetBool("isWalking", true);
         transform.Translate(Vector3.forward *Time.deltaTime * speed * forwardInput);
@@ -40,8 +41,6 @@ public class BotController : MonoBehaviour
             animator.SetBool("isWalking", true);
             transform.Translate(Vector3.forward * Time.deltaTime * speed * forwardInput);
         }
-
-
 
         else
         {
